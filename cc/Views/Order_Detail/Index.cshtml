@@ -1,0 +1,93 @@
+﻿@model IEnumerable<cc.Models.Order_Detail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.貨品名稱)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Endded.貨品狀況)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order.客戶)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pay.支付方法)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.代理表.代理稱謂)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.訂購日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.價格)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.件數)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.相關客戶)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.More)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.貨品名稱)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Endded.貨品狀況)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order.客戶)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pay.支付方法)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.代理表.代理稱謂)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.訂購日期)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.價格)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.件數)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.相關客戶)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.More)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OrderID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OrderID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OrderID })
+        </td>
+    </tr>
+}
+
+</table>

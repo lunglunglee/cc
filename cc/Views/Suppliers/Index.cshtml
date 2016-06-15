@@ -1,0 +1,93 @@
+﻿@model IEnumerable<cc.Models.Supplier>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.產品名稱)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.採購日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.採購項目)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.供應商)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.聯絡人)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.原材價錢)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.購入數量)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.單件產品耗量)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.已使用數量)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.圖片)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.備註)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.產品名稱)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.採購日期)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.採購項目)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.供應商)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.聯絡人)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.原材價錢)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.購入數量)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.單件產品耗量)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.已使用數量)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.圖片)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.備註)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SupplierID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SupplierID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SupplierID })
+        </td>
+    </tr>
+}
+
+</table>

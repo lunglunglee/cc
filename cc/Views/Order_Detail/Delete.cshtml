@@ -1,0 +1,112 @@
+﻿@model cc.Models.Order_Detail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Order_Detail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.貨品名稱)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.貨品名稱)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endded.貨品狀況)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endded.貨品狀況)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.客戶)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order.客戶)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pay.支付方法)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pay.支付方法)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.代理表.代理稱謂)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.代理表.代理稱謂)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.訂購日期)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.訂購日期)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.價格)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.價格)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.件數)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.件數)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.相關客戶)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.相關客戶)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.More)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.More)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

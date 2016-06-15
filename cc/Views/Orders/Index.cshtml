@@ -1,0 +1,105 @@
+﻿@model IEnumerable<cc.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_Area.AreaName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_City.CityName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_Province.ProvinceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order_Details.相關客戶)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.代理)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.客戶)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.訂購日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.發貨日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.送貨地址)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.運送方式)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.備註)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipVia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_Area.AreaName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_City.CityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_Province.ProvinceName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order_Details.相關客戶)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.代理)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.客戶)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.訂購日期)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.發貨日期)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.送貨地址)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.運送方式)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.備註)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipVia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OrderID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OrderID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OrderID })
+        </td>
+    </tr>
+}
+
+</table>
