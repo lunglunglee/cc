@@ -40,8 +40,8 @@
         <ObjectGroup Name="Model_cc 部署" Order="1">
           <Destination Path="Data Source=no-1%3bInitial Catalog=CCV0%3bPersist Security Info=True%3bUser ID=sa%3bPassword=Kwbe6822" />
           <Object Type="DbFullSql">
-            <PreSource Path="Data Source=cchost%3bInitial Catalog=CCv0%3bIntegrated Security=True%3bApplication Name=EntityFramework" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\Model_cc 部署_SchemaOnly.sql" Transacted="True" />
+            <PreSource Path="Data Source=NO-1%3bInitial Catalog=CCv0%3bIntegrated Security=True%3bApplication Name=EntityFramework" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\Model_SchemaAndData.sql" Transacted="True" />
           </Object>
         </ObjectGroup>
       </Objects>
@@ -184,6 +184,7 @@
     <None Include="Properties\PublishProfiles\a.pubxml" />
     <Content Include="MID\周杰倫 Jay Chou【床邊故事 Bedtime Stories】Official MV 完整版.mp4" />
     <Content Include="MID\陳冠希《又去約砲 》約砲歌-20160606.mp4" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Scripts\jquery-3.0.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
